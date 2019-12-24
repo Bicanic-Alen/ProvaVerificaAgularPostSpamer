@@ -1,19 +1,23 @@
-<form>
-  <div>
+<div class = "container">
+<form class="jumbotron" >
+  <div class="form-group">
     <label for = "text">text : </label>
     <input type = "text" name = "text" #newtxt >
   </div>
-  <div>
+  <div class="form-group">
      <label for = "times"> times : </label>
      <input type = "times" name = "times" #newtines>
   </div>
-  <button (click)="spam(newtxt, newtines)"> subimt </button>
+  <button (click)="spam(newtxt, newtines)" class="btn btn-primary"> subimt </button>
 </form>
-<div>
-  <ul>
-    <li *ngFor = " let c of articles">
+</div>
+<div class = "container">
+<div class = "jumbotron">
+  <ul class = "list-group">
+    <li class = "list-group-item" *ngFor = " let c of articles">
     <app-spamer [testo] = "c"></app-spamer>
     </li>
   </ul>
+</div>
 </div>
 
