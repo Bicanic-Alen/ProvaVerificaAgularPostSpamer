@@ -1,0 +1,19 @@
+<form>
+  <div>
+    <label for = "text">text : </label>
+    <input type = "text" name = "text" #newtxt >
+  </div>
+  <div>
+     <label for = "times"> times : </label>
+     <input type = "times" name = "times" #newtines>
+  </div>
+  <button (click)="spam(newtxt, newtines)"> subimt </button>
+</form>
+<div>
+  <ul>
+    <li *ngFor = " let c of articles">
+    <app-spamer [testo] = "c"></app-spamer>
+    </li>
+  </ul>
+</div>
+
